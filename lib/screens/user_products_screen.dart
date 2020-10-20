@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../providers/products.dart';
 
+import '../screens/edit_product_screen.dart';
 import '../widgets/user_product_item.dart';
 import '../widgets/app_drawer.dart';
 
@@ -18,7 +19,9 @@ class UserProductsScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.add_circle),
-            onPressed: null,
+            onPressed: () {
+              Navigator.of(context).pushNamed(EditProductScreen.routeName);
+            },
           )
         ],
       ),
